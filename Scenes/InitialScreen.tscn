@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ioemscfwt4gs"]
+
+[ext_resource type="Texture2D" uid="uid://crso6nw627jp4" path="res://CyberPunkIdler/Assets/SplashScreenPlaceHolder.png" id="1_pjp0a"]
+[ext_resource type="Theme" uid="uid://inbr0elddotj" path="res://MainMenuTheme.tres" id="2_r7qo0"]
+[ext_resource type="Script" uid="uid://di1qlv41ccfcf" path="res://CyberPunkIdler/Scenes/start_button.gd" id="3_6vgms"]
+[ext_resource type="Script" uid="uid://cllud77enft7f" path="res://CyberPunkIdler/Scenes/quit_button.gd" id="4_r7qo0"]
+
+[node name="Node2D" type="Node2D" unique_id=2123701187]
+
+[node name="Panel" type="Panel" parent="." unique_id=889995974]
+offset_right = 1151.0
+offset_bottom = 645.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1250315973]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 645.0
+texture = ExtResource("1_pjp0a")
+expand_mode = 1
+
+[node name="StartButton" type="Button" parent="Panel" unique_id=2130416136]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 129.0
+offset_right = 1028.0
+offset_bottom = 196.0
+theme = ExtResource("2_r7qo0")
+text = "Start Game"
+script = ExtResource("3_6vgms")
+
+[node name="QuitButton" type="Button" parent="Panel" unique_id=616499416]
+layout_mode = 0
+offset_left = 841.0
+offset_top = 220.0
+offset_right = 1028.0
+offset_bottom = 287.0
+theme = ExtResource("2_r7qo0")
+text = "Quit"
+script = ExtResource("4_r7qo0")
+
+[connection signal="pressed" from="Panel/StartButton" to="Panel/StartButton" method="_on_pressed"]
+[connection signal="pressed" from="Panel/QuitButton" to="Panel/QuitButton" method="_on_pressed"]

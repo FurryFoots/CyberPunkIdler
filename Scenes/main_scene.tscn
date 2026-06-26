@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://btm0rewcobblm"]
+
+[ext_resource type="Texture2D" uid="uid://dnvpgx6r7hn2m" path="res://CyberPunkIdler/Assets/BlankBackground.png" id="1_nhx88"]
+[ext_resource type="Theme" uid="uid://inbr0elddotj" path="res://MainMenuTheme.tres" id="2_1r31f"]
+[ext_resource type="Script" uid="uid://j0q2j0h03klf" path="res://CyberPunkIdler/Scenes/search_trash_progress_bar.gd" id="2_kdmb4"]
+[ext_resource type="ButtonGroup" uid="uid://d1lcwdj5rgct" path="res://Individual_Actions_Button_Group.tres" id="3_5hxgx"]
+[ext_resource type="Script" uid="uid://cisurhupvapm2" path="res://CyberPunkIdler/Scenes/mug_civilian_progress_bar.gd" id="4_xx3f7"]
+[ext_resource type="Script" uid="uid://bwlf4rbofgykn" path="res://CyberPunkIdler/Scenes/player.gd" id="5_xx3f7"]
+
+[node name="MainScene" type="Control" unique_id=1470368386]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BackgroundPanel" type="Panel" parent="." unique_id=393523764]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="BackgroundTextureRect" type="TextureRect" parent="BackgroundPanel" unique_id=605342211]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_nhx88")
+expand_mode = 2
+
+[node name="PlayArea" type="Node" parent="." unique_id=2124926157]
+
+[node name="SearchTrash" type="Node" parent="PlayArea" unique_id=78538672]
+
+[node name="SearchTrashButton" type="Button" parent="PlayArea/SearchTrash" unique_id=1181965079]
+offset_left = 94.0
+offset_top = 138.0
+offset_right = 231.0
+offset_bottom = 181.0
+theme = ExtResource("2_1r31f")
+toggle_mode = true
+button_group = ExtResource("3_5hxgx")
+text = "Search Trash"
+
+[node name="SearchTrashProgressBar" type="ProgressBar" parent="PlayArea/SearchTrash" unique_id=1947142810]
+offset_left = 238.0
+offset_top = 147.0
+offset_right = 442.0
+offset_bottom = 174.0
+script = ExtResource("2_kdmb4")
+
+[node name="MugCivilian" type="Node" parent="PlayArea" unique_id=1955438654]
+
+[node name="MugCivilianButton" type="Button" parent="PlayArea/MugCivilian" unique_id=1869391048]
+offset_left = 94.0
+offset_top = 192.0
+offset_right = 231.0
+offset_bottom = 235.0
+theme = ExtResource("2_1r31f")
+toggle_mode = true
+button_group = ExtResource("3_5hxgx")
+text = "Mug Civilian"
+
+[node name="MugCivilianProgressBar" type="ProgressBar" parent="PlayArea/MugCivilian" unique_id=591227671]
+offset_left = 238.0
+offset_top = 201.0
+offset_right = 442.0
+offset_bottom = 228.0
+script = ExtResource("4_xx3f7")
+
+[node name="PlayerStats" type="Node" parent="PlayArea" unique_id=1877167203]
+
+[node name="CashRichTextLabel" type="RichTextLabel" parent="PlayArea/PlayerStats" unique_id=193783229]
+offset_left = 128.0
+offset_top = 18.0
+offset_right = 192.0
+offset_bottom = 58.0
+theme = ExtResource("2_1r31f")
+text = "Cash"
+
+[node name="CashRichTextLabelNumber" type="RichTextLabel" parent="PlayArea/PlayerStats" unique_id=937146430]
+offset_left = 192.0
+offset_top = 18.0
+offset_right = 256.0
+offset_bottom = 58.0
+theme = ExtResource("2_1r31f")
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="CredRichTextLabel" type="RichTextLabel" parent="PlayArea/PlayerStats" unique_id=28423462]
+offset_left = 128.0
+offset_top = 58.0
+offset_right = 192.0
+offset_bottom = 98.0
+theme = ExtResource("2_1r31f")
+text = "Cred"
+
+[node name="CredRichTextLabelNumber" type="RichTextLabel" parent="PlayArea/PlayerStats" unique_id=1355779053]
+offset_left = 192.0
+offset_top = 58.0
+offset_right = 256.0
+offset_bottom = 98.0
+theme = ExtResource("2_1r31f")
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="HeatRichTextLabel" type="RichTextLabel" parent="PlayArea/PlayerStats" unique_id=1792386177]
+offset_left = 128.0
+offset_top = 98.0
+offset_right = 192.0
+offset_bottom = 138.0
+theme = ExtResource("2_1r31f")
+text = "Heat"
+
+[node name="HeatRichTextLabelNumber" type="RichTextLabel" parent="PlayArea/PlayerStats" unique_id=783495739]
+offset_left = 192.0
+offset_top = 98.0
+offset_right = 256.0
+offset_bottom = 138.0
+theme = ExtResource("2_1r31f")
+theme_override_font_sizes/normal_font_size = 20
+
+[node name="Player" type="Node" parent="." unique_id=1641430038]
+script = ExtResource("5_xx3f7")

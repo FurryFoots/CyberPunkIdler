@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crso6nw627jp4"
-path="res://.godot/imported/SplashScreenPlaceHolder.png-8f10f5525969f59f52ce1afefd921fba.ctex"
+uid="uid://dnvpgx6r7hn2m"
+path="res://.godot/imported/BlankBackground.png-05318faf5805404ea00dcb884b8ce6d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CyberPunkIdler/SplashScreenPlaceHolder.png"
-dest_files=["res://.godot/imported/SplashScreenPlaceHolder.png-8f10f5525969f59f52ce1afefd921fba.ctex"]
+source_file="res://CyberPunkIdler/Assets/BlankBackground.png"
+dest_files=["res://.godot/imported/BlankBackground.png-05318faf5805404ea00dcb884b8ce6d7.ctex"]
 
 [params]
 
