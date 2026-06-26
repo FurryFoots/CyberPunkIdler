@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dikya0f0p1nal"
-path="res://.godot/imported/SAIBA-45.otf-487c0f1d570cf3884324ea5ded8d2df0.fontdata"
+path="res://.godot/imported/SAIBA-45.otf-dbcd81b1886c547225476e79b773b54a.fontdata"
 
 [deps]
 
-source_file="res://CyberPunkIdler/Assets/SAIBA-45.otf"
-dest_files=["res://.godot/imported/SAIBA-45.otf-487c0f1d570cf3884324ea5ded8d2df0.fontdata"]
+source_file="res://Assets/SAIBA-45.otf"
+dest_files=["res://.godot/imported/SAIBA-45.otf-dbcd81b1886c547225476e79b773b54a.fontdata"]
 
 [params]
 

@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://btm0rewcobblm"]
 
-[ext_resource type="Texture2D" uid="uid://dnvpgx6r7hn2m" path="res://CyberPunkIdler/Assets/BlankBackground.png" id="1_nhx88"]
+[ext_resource type="Texture2D" uid="uid://dnvpgx6r7hn2m" path="res://Assets/BlankBackground.png" id="1_nhx88"]
 [ext_resource type="Theme" uid="uid://inbr0elddotj" path="res://MainMenuTheme.tres" id="2_1r31f"]
-[ext_resource type="Script" uid="uid://j0q2j0h03klf" path="res://CyberPunkIdler/Scenes/search_trash_progress_bar.gd" id="2_kdmb4"]
+[ext_resource type="Script" uid="uid://j0q2j0h03klf" path="res://Scripts/search_trash_progress_bar.gd" id="2_kdmb4"]
 [ext_resource type="ButtonGroup" uid="uid://d1lcwdj5rgct" path="res://Individual_Actions_Button_Group.tres" id="3_5hxgx"]
-[ext_resource type="Script" uid="uid://cisurhupvapm2" path="res://CyberPunkIdler/Scenes/mug_civilian_progress_bar.gd" id="4_xx3f7"]
-[ext_resource type="Script" uid="uid://bwlf4rbofgykn" path="res://CyberPunkIdler/Scenes/player.gd" id="5_xx3f7"]
+[ext_resource type="Script" uid="uid://cisurhupvapm2" path="res://Scripts/mug_civilian_progress_bar.gd" id="4_xx3f7"]
+[ext_resource type="Script" uid="uid://bwlf4rbofgykn" path="res://Scripts/player.gd" id="5_xx3f7"]
 
 [node name="MainScene" type="Control" unique_id=1470368386]
 layout_mode = 3

@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bbganb6bgpx72"
-path="res://.godot/imported/SAIBA-45-Outline.otf-62138cda8a9dfdb699cab57d8115b7c5.fontdata"
+path="res://.godot/imported/SAIBA-45-Outline.otf-fec86c831335479b11df06d4e6615a5d.fontdata"
 
 [deps]
 
-source_file="res://CyberPunkIdler/Assets/SAIBA-45-Outline.otf"
-dest_files=["res://.godot/imported/SAIBA-45-Outline.otf-62138cda8a9dfdb699cab57d8115b7c5.fontdata"]
+source_file="res://Assets/SAIBA-45-Outline.otf"
+dest_files=["res://.godot/imported/SAIBA-45-Outline.otf-fec86c831335479b11df06d4e6615a5d.fontdata"]
 
 [params]
 

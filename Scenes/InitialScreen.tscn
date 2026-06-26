@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ioemscfwt4gs"]
 
-[ext_resource type="Texture2D" uid="uid://crso6nw627jp4" path="res://CyberPunkIdler/Assets/SplashScreenPlaceHolder.png" id="1_pjp0a"]
+[ext_resource type="Texture2D" uid="uid://crso6nw627jp4" path="res://Assets/SplashScreenPlaceHolder.png" id="1_pjp0a"]
 [ext_resource type="Theme" uid="uid://inbr0elddotj" path="res://MainMenuTheme.tres" id="2_r7qo0"]
-[ext_resource type="Script" uid="uid://di1qlv41ccfcf" path="res://CyberPunkIdler/Scenes/start_button.gd" id="3_6vgms"]
-[ext_resource type="Script" uid="uid://cllud77enft7f" path="res://CyberPunkIdler/Scenes/quit_button.gd" id="4_r7qo0"]
+[ext_resource type="Script" uid="uid://di1qlv41ccfcf" path="res://Scripts/start_button.gd" id="3_6vgms"]
+[ext_resource type="Script" uid="uid://cllud77enft7f" path="res://Scripts/quit_button.gd" id="4_r7qo0"]
 
 [node name="Node2D" type="Node2D" unique_id=2123701187]
 

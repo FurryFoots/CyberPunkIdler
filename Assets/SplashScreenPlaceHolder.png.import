@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://crso6nw627jp4"
-path="res://.godot/imported/SplashScreenPlaceHolder.png-3eed690d26266c9cf1e01caf9254a125.ctex"
+path="res://.godot/imported/SplashScreenPlaceHolder.png-5b9ce16d197e13d867f28587411d2b77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CyberPunkIdler/Assets/SplashScreenPlaceHolder.png"
-dest_files=["res://.godot/imported/SplashScreenPlaceHolder.png-3eed690d26266c9cf1e01caf9254a125.ctex"]
+source_file="res://Assets/SplashScreenPlaceHolder.png"
+dest_files=["res://.godot/imported/SplashScreenPlaceHolder.png-5b9ce16d197e13d867f28587411d2b77.ctex"]
 
 [params]
 
