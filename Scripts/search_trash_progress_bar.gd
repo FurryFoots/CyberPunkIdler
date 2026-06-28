@@ -16,4 +16,4 @@ func _process(delta: float) -> void:
 			search_trash_progress_bar.value += 30.0 * delta # Fills 10 units per second
 		if search_trash_progress_bar.value == search_trash_progress_bar.max_value:
 			search_trash_progress_bar.value = 0
-			Player.modify_cash(1)
+			Player.modify_cash(Big.new(1))

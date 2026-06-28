@@ -16,6 +16,6 @@ func _process(delta: float) -> void:
 			mug_civilian_progress_bar.value += 20.0 * delta # Fills 10 units per second
 		if mug_civilian_progress_bar.value == mug_civilian_progress_bar.max_value:
 			mug_civilian_progress_bar.value = 0
-			Player.modify_cash(1)
-			Player.modify_cred(1)
-			Player.modify_heat(1)
+			Player.modify_cash(Big.new(1))
+			Player.modify_cred(Big.new(1))
+			Player.modify_heat(Big.new(1))

@@ -26,7 +26,7 @@ func purchase_gun_purchased() -> void:
 
 #PurchaseGun Button Pressed
 func _on_purchase_gun_pressed() -> void:
-	if player.cash >= 10:
+	if player.cash_big.isGreaterThanOrEqualTo(Big.new(10)):
 		purchase_gun_purchased()
-		player.modify_cash(-10)
+		player.modify_cash(Big.new(-10))
 		player.gun_purchased = true
