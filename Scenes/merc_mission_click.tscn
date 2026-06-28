@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://da4bl5dhdtic0"]
+
+[ext_resource type="Theme" uid="uid://inbr0elddotj" path="res://MainMenuTheme.tres" id="1_3t2ef"]
+[ext_resource type="Script" uid="uid://j0q2j0h03klf" path="res://Scripts/search_trash_progress_bar.gd" id="2_sxc70"]
+
+[node name="MercMissionClick" type="Control" unique_id=922773491]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 660.0
+offset_bottom = 134.0
+
+[node name="SearchTrashProgressBar" type="ProgressBar" parent="." unique_id=1765796477]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 26.0
+offset_right = 628.0
+offset_bottom = 65.0
+theme = ExtResource("1_3t2ef")
+script = ExtResource("2_sxc70")
+
+[node name="SearchTrashButton" type="Button" parent="." unique_id=2027285934]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 4.0
+offset_right = 118.0
+offset_bottom = 92.0
+theme = ExtResource("1_3t2ef")
+text = "Action"
+
+[node name="Label" type="Label" parent="." unique_id=727709016]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 109.0
+offset_right = 625.0
+offset_bottom = 132.0
+theme = ExtResource("1_3t2ef")
+text = "Search the Trash"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="SearchTrashButton" to="SearchTrashProgressBar" method="_on_search_trash_button_pressed"]

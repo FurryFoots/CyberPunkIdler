@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://cisurhupvapm2" path="res://Scripts/mug_civilian_progress_bar.gd" id="4_xx3f7"]
 [ext_resource type="Script" uid="uid://bwlf4rbofgykn" path="res://Scripts/player.gd" id="5_xx3f7"]
 [ext_resource type="Script" uid="uid://ng47d4gvhvnx" path="res://Scenes/game_state.gd" id="7_maf8m"]
+[ext_resource type="Script" uid="uid://dkr0h4uegccpi" path="res://TestTools/test_generate_def_msn_button.gd" id="8_huasi"]
 
 [node name="MainScene" type="Control" unique_id=1470368386]
 layout_mode = 3
@@ -18,6 +19,8 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="BackgroundTextureRect" type="TextureRect" parent="BackgroundPanel" unique_id=605342211]
+light_mask = 2
+visibility_layer = 2
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 648.0
@@ -29,6 +32,7 @@ expand_mode = 2
 [node name="SearchTrash" type="Node" parent="PlayArea" unique_id=78538672]
 
 [node name="SearchTrashButton" type="Button" parent="PlayArea/SearchTrash" unique_id=1181965079]
+visible = false
 offset_left = 94.0
 offset_top = 138.0
 offset_right = 231.0
@@ -39,6 +43,7 @@ button_group = ExtResource("3_5hxgx")
 text = "Search Trash"
 
 [node name="SearchTrashProgressBar" type="ProgressBar" parent="PlayArea/SearchTrash" unique_id=1947142810]
+visible = false
 offset_left = 238.0
 offset_top = 147.0
 offset_right = 442.0
@@ -125,10 +130,90 @@ offset_bottom = 138.0
 theme = ExtResource("2_1r31f")
 theme_override_font_sizes/normal_font_size = 20
 
+[node name="JobButtonsPanel" type="Panel" parent="PlayArea" unique_id=1302456037]
+offset_top = 147.0
+offset_right = 1152.0
+offset_bottom = 187.0
+
+[node name="JobButtonsHBoxContainer" type="HBoxContainer" parent="PlayArea/JobButtonsPanel" unique_id=131667111]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 40.0
+theme_override_constants/separation = 15
+
+[node name="DefaultJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=1894090411]
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Default"
+
+[node name="CombatJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=2058191102]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Combat"
+
+[node name="HackingJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=130303883]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Hacking"
+
+[node name="StealthJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=730459861]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Stealth"
+
+[node name="EngineeringJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=420834255]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Engineering"
+
+[node name="NegotiationJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=1856258774]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Negotiation"
+
+[node name="PilotingJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=847433387]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+text = "Piloting"
+
+[node name="ClickMissionsPanel" type="ScrollContainer" parent="PlayArea" unique_id=609678248]
+offset_top = 203.0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="ClickMissionsVBox" type="VBoxContainer" parent="PlayArea/ClickMissionsPanel" unique_id=570491366]
+layout_mode = 2
+theme_override_constants/separation = 150
+
 [node name="Player" type="Node" parent="." unique_id=1641430038]
+unique_name_in_owner = true
 script = ExtResource("5_xx3f7")
 
 [node name="GameState" type="Node" parent="." unique_id=1808275534]
 script = ExtResource("7_maf8m")
 
+[node name="Test Stuff to Remove" type="Node" parent="." unique_id=518380000]
+
+[node name="GenerateDefMsnButton" type="Button" parent="Test Stuff to Remove" unique_id=1760326052]
+offset_left = 725.0
+offset_top = 23.0
+offset_right = 889.0
+offset_bottom = 72.0
+text = "Gen Default Mission"
+script = ExtResource("8_huasi")
+
 [connection signal="pressed" from="PlayArea/MugCivilian/PurchaseGun" to="GameState" method="_on_purchase_gun_pressed"]
+[connection signal="pressed" from="Test Stuff to Remove/GenerateDefMsnButton" to="Test Stuff to Remove/GenerateDefMsnButton" method="_on_pressed"]
