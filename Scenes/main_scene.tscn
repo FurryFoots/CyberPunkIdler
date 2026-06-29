@@ -6,8 +6,14 @@
 [ext_resource type="ButtonGroup" uid="uid://d1lcwdj5rgct" path="res://Individual_Actions_Button_Group.tres" id="3_5hxgx"]
 [ext_resource type="Script" uid="uid://cisurhupvapm2" path="res://Scripts/mug_civilian_progress_bar.gd" id="4_xx3f7"]
 [ext_resource type="Script" uid="uid://bwlf4rbofgykn" path="res://Scripts/player.gd" id="5_xx3f7"]
+[ext_resource type="Script" uid="uid://bbys3shb0lkji" path="res://Scenes/default_job_button.gd" id="6_drdnd"]
+[ext_resource type="Script" uid="uid://baibvedpt6rvn" path="res://Scenes/combat_job_button.gd" id="7_ioaeq"]
 [ext_resource type="Script" uid="uid://ng47d4gvhvnx" path="res://Scenes/game_state.gd" id="7_maf8m"]
 [ext_resource type="Script" uid="uid://dkr0h4uegccpi" path="res://TestTools/test_generate_def_msn_button.gd" id="8_huasi"]
+[ext_resource type="Script" uid="uid://5rjm5klk01ky" path="res://TestTools/test_unlock_combat_offer.gd" id="9_mai8y"]
+[ext_resource type="Script" uid="uid://6bwi1tt7eshw" path="res://TestTools/test_generate_com_msn.gd" id="10_76v2p"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_drdnd"]
 
 [node name="MainScene" type="Control" unique_id=1470368386]
 layout_mode = 3
@@ -145,20 +151,25 @@ theme_override_constants/separation = 15
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Default"
+script = ExtResource("6_drdnd")
 
 [node name="CombatJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=2058191102]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Combat"
+script = ExtResource("7_ioaeq")
 
 [node name="HackingJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=130303883]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Hacking"
 
 [node name="StealthJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=730459861]
@@ -166,6 +177,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Stealth"
 
 [node name="EngineeringJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=420834255]
@@ -173,6 +185,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Engineering"
 
 [node name="NegotiationJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=1856258774]
@@ -180,6 +193,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Negotiation"
 
 [node name="PilotingJobButton" type="Button" parent="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer" unique_id=847433387]
@@ -187,6 +201,7 @@ visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 toggle_mode = true
+button_group = SubResource("ButtonGroup_drdnd")
 text = "Piloting"
 
 [node name="ClickMissionsPanel" type="ScrollContainer" parent="PlayArea" unique_id=609678248]
@@ -194,7 +209,12 @@ offset_top = 203.0
 offset_right = 1152.0
 offset_bottom = 648.0
 
-[node name="ClickMissionsVBox" type="VBoxContainer" parent="PlayArea/ClickMissionsPanel" unique_id=570491366]
+[node name="DefaultJobVBox" type="VBoxContainer" parent="PlayArea/ClickMissionsPanel" unique_id=570491366]
+layout_mode = 2
+theme_override_constants/separation = 150
+
+[node name="CombatJobVBox" type="VBoxContainer" parent="PlayArea/ClickMissionsPanel" unique_id=718623680]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 150
 
@@ -215,5 +235,25 @@ offset_bottom = 72.0
 text = "Gen Default Mission"
 script = ExtResource("8_huasi")
 
+[node name="UnlockCombatOffer" type="Button" parent="Test Stuff to Remove" unique_id=1364164462]
+offset_left = 722.0
+offset_top = 95.0
+offset_right = 878.0
+offset_bottom = 126.0
+text = "Unlock Combat Job"
+script = ExtResource("9_mai8y")
+
+[node name="GenerateComMsn" type="Button" parent="Test Stuff to Remove" unique_id=1398952249]
+offset_left = 918.0
+offset_top = 94.0
+offset_right = 1074.0
+offset_bottom = 125.0
+text = "Generate Combat Msn"
+script = ExtResource("10_76v2p")
+
 [connection signal="pressed" from="PlayArea/MugCivilian/PurchaseGun" to="GameState" method="_on_purchase_gun_pressed"]
+[connection signal="pressed" from="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer/DefaultJobButton" to="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer/DefaultJobButton" method="_on_pressed"]
+[connection signal="pressed" from="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer/CombatJobButton" to="PlayArea/JobButtonsPanel/JobButtonsHBoxContainer/CombatJobButton" method="_on_pressed"]
 [connection signal="pressed" from="Test Stuff to Remove/GenerateDefMsnButton" to="Test Stuff to Remove/GenerateDefMsnButton" method="_on_pressed"]
+[connection signal="pressed" from="Test Stuff to Remove/UnlockCombatOffer" to="Test Stuff to Remove/UnlockCombatOffer" method="_on_pressed"]
+[connection signal="pressed" from="Test Stuff to Remove/GenerateComMsn" to="Test Stuff to Remove/GenerateComMsn" method="_on_pressed"]
